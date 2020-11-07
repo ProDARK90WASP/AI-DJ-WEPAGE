@@ -1,0 +1,47 @@
+.heading{
+    width: 100%;
+    margin-top: 0px;
+    font-size: 1cm;
+    font-family: 'Chewy',cursive;
+    background-color: black;
+    color: white;
+}
+body{
+    background-image: url('background.jpg');
+    background-size: cover;
+}
+#disk_volume{
+    float: right;
+}
+.disk_volume{
+    border-radius: 300px;
+    width: 350px;
+}
+#disk_speed{
+    float: left;
+}
+.disk_speed{
+    border-radius: 300px;
+    width: 350px;
+}
+.disk_speed_h3{
+    font-size: 20px;
+    font-family: 'Chewy',cursive;
+    color: crimson;
+}
+.disk_volume_h3{
+    font-size: 20px;
+    font-family: 'Chewy',cursive;
+    color: crimson;
+}
+#button_play{
+    width: 200px;
+    height: 100px;
+    font-family: 'Chewy',cursive;
+    font-size: 25px;
+}
+canvas{
+    border: white solid 15px;
+    border-radius: 40px;
+    box-shadow: 10px 10px 10px orangered;
+}
