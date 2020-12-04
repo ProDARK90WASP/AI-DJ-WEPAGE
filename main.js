@@ -49,10 +49,6 @@ else if(RwristY>400 && RwristY<=500){
     document.getElementById(speed_h3).innerHTML="Speed- 2.5x";
     song.rate(2.5);
 }
-else if(RwristY>500 && RwristY<=600){
-    document.getElementById(speed_h3).innerHTML="Speed- 3x";
-    song.rate(3);
-}
 }
 function play_music(){
     song.play();
