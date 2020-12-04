@@ -1,4 +1,5 @@
 song="";
+scoreLwrist=0;
 LwristX=0;
 LwristY=0;
 RwristX=0;
@@ -28,6 +29,30 @@ if(scoreLwrist>0.2){
     document.getElementById("volume_h3").innerHTML="Volume- "+volume;
 }
 circle(RwristX,RwristY,20);
+if(RwristY>0 && RwristY<=100){
+    document.getElementById(speed_h3).innerHTML="Speed- 0.5x";
+    song.rate(0.5);
+}
+else if(RwristY>100 && RwristY<=200){
+    document.getElementById(speed_h3).innerHTML="Speed- 1x";
+    song.rate(1);
+}
+else if(RwristY>200 && RwristY<=300){
+    document.getElementById(speed_h3).innerHTML="Speed- 1.5x";
+    song.rate(1.5);
+}
+else if(RwristY>300 && RwristY<=400){
+    document.getElementById(speed_h3).innerHTML="Speed- 2x";
+    song.rate(2);
+}
+else if(RwristY>400 && RwristY<=500){
+    document.getElementById(speed_h3).innerHTML="Speed- 2.5x";
+    song.rate(2.5);
+}
+else if(RwristY>500 && RwristY<=600){
+    document.getElementById(speed_h3).innerHTML="Speed- 3x";
+    song.rate(3);
+}
 }
 function play_music(){
     song.play();
@@ -44,7 +69,7 @@ function gotposes(result){
         LwristY=result[0].pose.leftWrist.y;
         RwristX=result[0].pose.rightWrist.x;
         RwristY=result[0].pose.rightWrist.y;
-        console.log(LwristX+LwristY+RwristX+RwristY);
         scoreLwrist=result[0].pose.keypoints[9].score;
+        console.log(scoreLwrist);
     }
 }
